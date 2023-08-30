@@ -49,9 +49,21 @@ module.exports = {
                                 ]
                             }
                         }});
-                    console.log(response);
                     })();
-                    interaction.reply(`hoge`); 
+                    interaction.reply({
+                        embeds: [{
+                            title: `追加完了`,
+                            color: 0xF00035,
+                            timestamp: new Date(),
+                            footer: {
+                                text: "高識先輩 / Google",
+                            },
+                            fields: [
+                                {name: `書籍名`, value: result.summary.title, inline: true},
+                                {name: `著者`, value: `${result.summaryauthor}`, inline: true},
+                                {name: `出版社`, value: result.summary.publisher, inline: true},
+                            ]
+                        }]}); 
             })
         }  
 }
