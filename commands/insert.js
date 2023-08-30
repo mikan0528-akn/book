@@ -60,7 +60,7 @@ module.exports = {
                             },
                             fields: [
                                 {name: `書籍名`, value: result.summary.title, inline: true},
-                                {name: `著者`, value: `${result.summaryauthor}`, inline: true},
+                                {name: `著者`, value: `${result.summary.author}`, inline: true},
                                 {name: `出版社`, value: result.summary.publisher, inline: true},
                             ]
                         }]}); 
